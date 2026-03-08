@@ -15,9 +15,9 @@ if (hero && heroBg) {
         const x = ((clientX - left) / width) * 100;
         const y = ((clientY - top) / height) * 100;
         heroBg.style.background = `
-      radial-gradient(circle at ${x}% ${y}%, rgba(37,99,235,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.22) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(0,245,212,0.08) 0%, transparent 50%)
+      radial-gradient(circle at ${x}% ${y}%, rgba(37,99,235,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(37,99,235,0.04) 0%, transparent 50%)
     `;
     });
 }
@@ -85,7 +85,9 @@ const roiObserver = new IntersectionObserver((entries) => {
             document.querySelectorAll('.roi-big').forEach(el => {
                 const text = el.textContent;
                 if (text.includes('+30')) { el.textContent = '+0%'; animateCounter(el, 30, '%'); }
-                else if (text.includes('-40')) { el.textContent = '-0%'; animateCounter(el, -40, '%'); }
+                else if (text.includes('14D')) { el.textContent = '0D'; animateCounter(el, 14, 'D'); }
+                else if (text.includes('100%')) { el.textContent = '0%'; animateCounter(el, 100, '%'); }
+                else if (text.includes('0H')) { el.textContent = '0H'; animateCounter(el, 0, 'H'); }
             });
         }
     });
@@ -105,15 +107,16 @@ if (ham && navLinks) {
         flex-direction: column;
         position: fixed;
         top: 68px; left: 0; right: 0;
-        background: rgba(10,10,10,0.97);
+        background: rgba(255,255,255,0.98);
         backdrop-filter: blur(20px);
         padding: 32px 24px;
         gap: 24px;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
         z-index: 99;
       `;
             navLinks.querySelectorAll('a').forEach(a => {
                 a.style.fontSize = '1.1rem';
+                a.style.color = '#111827';
                 a.addEventListener('click', () => {
                     mobileMenuOpen = false;
                     navLinks.style.display = 'none';
