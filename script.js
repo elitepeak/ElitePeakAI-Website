@@ -43,6 +43,16 @@ const initApp = () => {
 
     reveals.forEach(r => revealObserver.observe(r));
 
+    // Fallback: If elements are still invisible after 2 seconds (e.g., due to CDN/Vercel script loading issues), show them unconditionally
+    setTimeout(() => {
+        reveals.forEach(r => {
+            if (!r.classList.contains('visible')) {
+                r.style.transition = 'opacity 1s ease, transform 1s ease';
+                r.classList.add('visible');
+            }
+        });
+    }, 2000);
+
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(q => {
         q.addEventListener('click', () => {
