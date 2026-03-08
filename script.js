@@ -1,7 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons
-    if (window.lucide) {
-        window.lucide.createIcons();
+const initApp = () => {
+    try {
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    } catch (err) {
+        console.error('Lucide icon error:', err);
     }
 
     // Navbar scroll effect
@@ -150,4 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    // DOM is already ready
+    initApp();
+}
