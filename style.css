@@ -1,13 +1,13 @@
 :root {
-    --bg: #0A0A0A;
+    --bg: #FFFFFF;
     --accent: #2563EB;
-    --accent-light: #60a5fa;
-    --text: #FFFFFF;
-    --muted: #9CA3AF;
-    --card: #111111;
-    --border: rgba(255, 255, 255, 0.07);
-    --glow: rgba(37, 99, 235, 0.35);
-    --glow2: rgba(37, 99, 235, 0.15);
+    --accent-light: #3B82F6;
+    --text: #111827;
+    --muted: #4B5563;
+    --card: #FFFFFF;
+    --border: rgba(0, 0, 0, 0.08);
+    --glow: rgba(37, 99, 235, 0.15);
+    --glow2: rgba(37, 99, 235, 0.05);
 }
 
 *,
@@ -32,7 +32,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #222;
+    background: #E5E7EB;
     border-radius: 5px;
     border: 3px solid var(--bg);
 }
@@ -58,7 +58,7 @@ body::before {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.4;
+    opacity: 0.15;
 }
 
 /* ───────── TYPOGRAPHY ───────── */
@@ -142,8 +142,8 @@ section {
 }
 
 .btn-outline:hover {
-    border-color: rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 /* ───────── NAVBAR ───────── */
@@ -159,7 +159,7 @@ nav {
 }
 
 nav.scrolled {
-    background: rgba(10, 10, 10, 0.85);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     border-bottom-color: var(--border);
 }
@@ -253,8 +253,8 @@ nav.scrolled {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(37, 99, 235, 0.04) 0%, transparent 50%);
 }
 
 .hero-bg::before {
@@ -266,7 +266,7 @@ nav.scrolled {
     height: 500px;
     background: var(--accent);
     filter: blur(160px);
-    opacity: 0.1;
+    opacity: 0.06;
     border-radius: 50%;
     animation: float-blob 25s infinite alternate;
 }
@@ -285,8 +285,8 @@ nav.scrolled {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
 }
@@ -343,10 +343,7 @@ nav.scrolled {
     letter-spacing: -0.04em;
     line-height: 1.0;
     margin-bottom: 28px;
-    background: linear-gradient(180deg, #fff 60%, rgba(255, 255, 255, 0.6) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text);
 }
 
 .hero h1 em {
@@ -494,8 +491,8 @@ nav.scrolled {
 .bullet-icon {
     width: 32px;
     height: 32px;
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.2);
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.1);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -635,8 +632,8 @@ nav.scrolled {
 
 .val-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(37, 99, 235, 0.3);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(37, 99, 235, 0.1);
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05), 0 0 40px rgba(37, 99, 235, 0.05);
 }
 
 .val-card:hover::before {
@@ -676,7 +673,7 @@ nav.scrolled {
 
 /* ───────── SERVICES ───────── */
 #services {
-    background: linear-gradient(180deg, var(--bg) 0%, #0d0d14 100%);
+    background: linear-gradient(180deg, var(--bg) 0%, #F3F4F6 100%);
 }
 
 .services-grid {
@@ -688,7 +685,7 @@ nav.scrolled {
 }
 
 .service-card {
-    background: rgba(17, 17, 17, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: 20px;
