@@ -22,17 +22,6 @@ if (hero && heroBg) {
     });
 }
 
-// Logo logic
-const logoImg = document.getElementById('logo-img');
-const logoText = document.getElementById('logo-text');
-if (logoImg && logoText) {
-    const img = new Image();
-    img.src = logoImg.src;
-    img.onload = () => {
-        logoImg.style.display = 'block';
-        logoText.style.display = 'none';
-    };
-}
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
