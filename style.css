@@ -1,13 +1,13 @@
 :root {
     --bg: #0A0A0A;
     --accent: #2563EB;
-    --accent2: #00F5D4;
+    --accent-light: #60a5fa;
     --text: #FFFFFF;
     --muted: #9CA3AF;
     --card: #111111;
     --border: rgba(255, 255, 255, 0.07);
     --glow: rgba(37, 99, 235, 0.35);
-    --glow2: rgba(0, 245, 212, 0.2);
+    --glow2: rgba(37, 99, 235, 0.15);
 }
 
 *,
@@ -44,8 +44,8 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -67,7 +67,7 @@ h2,
 h3,
 h4,
 .logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -92,10 +92,10 @@ section {
     gap: 8px;
     background: var(--accent);
     color: #fff;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     padding: 14px 28px;
     border-radius: 8px;
     border: none;
@@ -190,7 +190,7 @@ nav.scrolled {
 }
 
 .logo span {
-    color: var(--accent2);
+    color: var(--accent);
 }
 
 .nav-links {
@@ -254,7 +254,7 @@ nav.scrolled {
     inset: 0;
     background:
         radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(0, 245, 212, 0.08) 0%, transparent 50%);
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
 }
 
 .hero-bg::before {
@@ -302,9 +302,9 @@ nav.scrolled {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(37, 99, 235, 0.12);
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    color: var(--accent2);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    color: var(--accent);
     font-size: 0.75rem;
     font-weight: 500;
     padding: 8px 18px;
@@ -318,7 +318,7 @@ nav.scrolled {
     content: '';
     width: 6px;
     height: 6px;
-    background: var(--accent2);
+    background: var(--accent);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -351,7 +351,7 @@ nav.scrolled {
 
 .hero h1 em {
     font-style: normal;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -514,7 +514,7 @@ nav.scrolled {
     font-family: 'Syne', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--accent2);
+    color: var(--accent);
 }
 
 .problem-visual {
@@ -596,7 +596,7 @@ nav.scrolled {
 }
 
 .prob-card-val.good {
-    color: var(--accent2);
+    color: var(--accent);
 }
 
 /* ───────── VALUE PROPS ───────── */
@@ -628,7 +628,7 @@ nav.scrolled {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
     opacity: 0;
     transition: opacity 0.25s;
 }
@@ -721,14 +721,14 @@ nav.scrolled {
 }
 
 .service-icon {
-    background: rgba(0, 245, 212, 0.08);
-    border: 1px solid rgba(0, 245, 212, 0.15);
+    background: rgba(37, 99, 235, 0.06);
+    border: 1px solid rgba(37, 99, 235, 0.1);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 22px;
-    color: var(--accent2);
+    color: var(--accent);
 }
 
 .service-icon svg {
@@ -756,7 +756,7 @@ nav.scrolled {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent2);
+    color: var(--accent);
     opacity: 0.7;
 }
 
@@ -793,7 +793,7 @@ nav.scrolled {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent2), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
     opacity: 0.4;
 }
 
