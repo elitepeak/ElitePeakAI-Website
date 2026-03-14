@@ -31,6 +31,19 @@ const initApp = () => {
         });
     }
 
+    // Service Card Spotlight
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { left, top } = card.getBoundingClientRect();
+            const x = clientX - left;
+            const y = clientY - top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
     // Intersection Observer for reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
@@ -120,33 +133,25 @@ const initApp = () => {
     // Hamburger toggle (mobile)
     const ham = document.getElementById('ham');
     const navLinks = document.querySelector('.nav-links');
-    let mobileMenuOpen = false;
     if (ham && navLinks) {
         ham.addEventListener('click', () => {
-            mobileMenuOpen = !mobileMenuOpen;
-            if (mobileMenuOpen) {
-                navLinks.style.cssText = `
-                    display: flex;
-                    flex-direction: column;
-                    position: fixed;
-                    top: 68px; left: 0; right: 0;
-                    background: rgba(255,255,255,0.98);
-                    backdrop-filter: blur(20px);
-                    padding: 32px 24px;
-                    gap: 24px;
-                    border-bottom: 1px solid rgba(0,0,0,0.08);
-                    z-index: 99;
-                `;
-                navLinks.querySelectorAll('a').forEach(a => {
-                    a.style.fontSize = '1.1rem';
-                    a.style.color = '#111827';
-                    a.addEventListener('click', () => {
-                        mobileMenuOpen = false;
-                        navLinks.style.display = 'none';
-                    });
-                });
-            } else {
-                navLinks.style.display = 'none';
+            ham.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                ham.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!ham.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+                ham.classList.remove('active');
+                navLinks.classList.remove('active');
             }
         });
     }
