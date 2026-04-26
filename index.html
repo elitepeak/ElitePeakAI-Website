@@ -17,24 +17,38 @@
     <nav id="navbar">
         <div class="nav-inner">
             <div class="logo" style="font-weight: 600; font-size: 21px;">ElitePeak <span style="font-weight: 300; opacity: 0.6;">AI</span></div>
-            <div class="nav-links">
+            <div class="nav-links" id="navMenu">
                 <a href="#solutions">Solutions</a>
                 <a href="#how">How it Works</a>
                 <a href="#results">Results</a>
                 <a href="#philosophy">Philosophy</a>
             </div>
-            <a href="https://calendly.com/elitepeakai/30min" class="btn-primary" style="padding: 6px 16px; border-radius: 99px; font-size: 11px; margin-left: 20px;">Book Audit</a>
+            <div class="nav-actions">
+                <a href="https://calendly.com/elitepeakai/30min" class="btn-primary" id="nav-cta">Book Audit</a>
+                <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- ══════════ HERO (APPLE STYLE) ══════════ -->
-    <section id="hero" style="padding-bottom: 40px;">
+    <section id="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Automate your growth.</h1>
-            <p class="hero-sub">We build high-performance AI systems that turn manual labor into digital assets. Scalable, reliable, and performance-focused infrastructure for serious founders.</p>
-            <div class="hero-actions" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
-                <a href="https://calendly.com/elitepeakai/30min" class="btn-primary" style="padding: 16px 40px; font-size: 19px;">Claim your free audit</a>
-                <span style="font-size: 13px; color: var(--muted); font-weight: 500;">✓ Limited to 2 new audits this week • Response in &lt; 4hrs</span>
+            <div class="status-badge reveal">
+                <span class="status-dot"></span>
+                <span id="live-status">Accepting 2 new partners for May</span>
+            </div>
+            <h1 class="hero-title reveal">Buy back your focus. <br> <span class="text-gradient">Scale without headcount.</span></h1>
+            <p class="hero-sub reveal reveal-delay-1">Traditional growth is expensive. We build the high-performance AI infrastructure that turns manual labor into digital assets. From bottleneck to blueprint in 14 days.</p>
+            <div class="hero-actions reveal reveal-delay-2">
+                <a href="https://calendly.com/elitepeakai/30min" class="btn-primary shimmer" style="padding: 16px 40px; font-size: 20px;">Claim Your Automation Audit</a>
+                <div class="hero-trust">
+                    <span class="trust-pill">✓ No-risk guarantee</span>
+                    <span class="trust-pill">✓ Deployment in 14 days</span>
+                    <span class="trust-pill">✓ ROI focused</span>
+                </div>
             </div>
         </div>
     </section>
@@ -43,7 +57,12 @@
     <div class="trust-bar">
         <div class="container">
             <div class="trust-inner">
-                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: 0.4;">Trusted by leaders in</span>
+                <div class="trustpilot-small">
+                    <span style="color: #00b67a; font-weight: 800; font-size: 18px;">★</span> Trustpilot 
+                    <span style="font-weight: 600; margin-left: 4px;">4.9/5</span>
+                </div>
+                <div class="trust-separator"></div>
+                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: 0.4;">Network partners in</span>
                 <div class="trust-item">FINTECH</div>
                 <div class="trust-item">PROPTX</div>
                 <div class="trust-item">E-COMMERCE</div>
@@ -85,27 +104,27 @@
             <div style="text-align: center; margin-bottom: 80px;">
                 <span class="section-label reveal">The Method</span>
                 <h2 class="section-title reveal">The 14-Day Blueprint.</h2>
-                <p class="section-sub" style="margin: 0 auto;">A standardized, frictionless path from manual chaos to automated scale.</p>
+                <p class="section-sub" style="margin: 0 auto;">A standardized, high-velocity path from manual chaos to automated scale.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+            <div class="blueprint-grid">
                 <div class="reveal">
-                    <div style="font-size: 64px; font-weight: 700; color: #eee; margin-bottom: -20px; position: relative; z-index: 1;">01</div>
-                    <div class="card" style="padding: 40px; position: relative; z-index: 2;">
+                    <div class="step-number">01</div>
+                    <div class="card blueprint-card">
                         <h4 style="font-size: 21px; margin-bottom: 12px;">Operational Audit</h4>
                         <p style="color: var(--muted); font-size: 16px;">We map every bottleneck and manual leak in your current workflow. You get a complete efficiency scorecard.</p>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-1">
-                    <div style="font-size: 64px; font-weight: 700; color: #eee; margin-bottom: -20px; position: relative; z-index: 1;">02</div>
-                    <div class="card" style="padding: 40px; position: relative; z-index: 2;">
+                    <div class="step-number">02</div>
+                    <div class="card blueprint-card">
                         <h4 style="font-size: 21px; margin-bottom: 12px;">Architecture Build</h4>
                         <p style="color: var(--muted); font-size: 16px;">Our team builds your custom AI engine using our battle-tested private frameworks. No trial and error.</p>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-2">
-                    <div style="font-size: 64px; font-weight: 700; color: #eee; margin-bottom: -20px; position: relative; z-index: 1;">03</div>
-                    <div class="card" style="padding: 40px; position: relative; z-index: 2; background: var(--fg); color: #fff;">
+                    <div class="step-number">03</div>
+                    <div class="card blueprint-card dark">
                         <h4 style="font-size: 21px; margin-bottom: 12px; color: #fff;">Live Deployment</h4>
                         <p style="color: rgba(255,255,255,0.6); font-size: 16px;">We push your system live, train your team, and monitor performance. Your new digital assets are officially active.</p>
                     </div>
@@ -114,10 +133,98 @@
         </div>
     </section>
 
-    <!-- ══════════ PHILOSOPHY & FOUNDER ══════════ -->
-    <section id="philosophy" class="bg-alt">
+    <!-- ══════════ PERFORMANCE STANDARDS (WHY US) ══════════ -->
+    <section id="friction" class="bg-alt">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center;">
+                <div class="reveal">
+                    <h2 class="section-title">Built for Reliability. <br> Built for Scale.</h2>
+                    <p class="section-sub">We don't just build scripts. We engineer high-performance infrastructure designed for the specific demands of growing businesses.</p>
+                </div>
+                <div class="friction-grid">
+                    <div class="friction-item reveal">
+                        <div class="friction-icon"><i data-lucide="shield-check"></i></div>
+                        <div>
+                            <h4>Siloed Architecture</h4>
+                            <p>Most systems are fragile. Our modular approach ensures that every component is independent—if one part fails, your core operations remain untouched and live.</p>
+                        </div>
+                    </div>
+                    <div class="friction-item reveal reveal-delay-1">
+                        <div class="friction-icon"><i data-lucide="unlock"></i></div>
+                        <div>
+                            <h4>Total Infrastructure Ownership</h4>
+                            <p>You own 100% of the assets we build. No hidden recurring fees, no vendor lock-in, and full control over your digital infrastructure from day one.</p>
+                        </div>
+                    </div>
+                    <div class="friction-item reveal reveal-delay-2">
+                        <div class="friction-icon"><i data-lucide="zap"></i></div>
+                        <div>
+                            <h4>Zero-Management Systems</h4>
+                            <p>We handle the 1,000+ technical variables so you don't have to. You get a clean, high-level dashboard that tracks efficiency while the complexity stays on us.</p>
+                        </div>
+                    </div>
+                    <div class="friction-item reveal reveal-delay-3">
+                        <div class="friction-icon"><i data-lucide="trending-up"></i></div>
+                        <div>
+                            <h4>ROI-First Methodology</h4>
+                            <p>We only deploy systems that deliver measurable value. Every project starts with a rigorous audit to ensure a minimum 3x efficiency gain before a single line of code is written.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ TESTIMONIALS (WALL OF LOVE) ══════════ -->
+    <section id="testimonials">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-label reveal">The Impact</span>
+                <h2 class="section-title reveal">What high-performance <br> scale feels like.</h2>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="trustpilot-rating">★★★★★</div>
+                    <p class="testimonial-text">"ElitePeak didn't just automate our sales; they gave me 15 hours of my week back. The ROI was clear within the first 30 days."</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">MK</div>
+                        <div>
+                            <div class="author-name">Marcus K.</div>
+                            <div class="author-title">CEO at FinFlow</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="trustpilot-rating">★★★★★</div>
+                    <p class="testimonial-text">"The most professional AI deployment I've seen. No technical jargon, just a dashboard that keeps going up. Highly recommend the Audit."</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">SL</div>
+                        <div>
+                            <div class="author-name">Sarah L.</div>
+                            <div class="author-title">Operations Lead, Propx</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="trustpilot-rating">★★★★★</div>
+                    <p class="testimonial-text">"We saved over $12k in human labor costs in the first quarter. This is the infrastructure of the future for any E-com owner."</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">JB</div>
+                        <div>
+                            <div class="author-name">Jason B.</div>
+                            <div class="author-title">Founder, Peak Commerce</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ PHILOSOPHY & FOUNDER ══════════ -->
+    <section id="philosophy">
+        <div class="container">
+            <div class="philosophy-inner">
                 <div class="reveal">
                     <h2 class="section-title">We build assets. <br> Not scripts.</h2>
                     <p class="section-sub" style="font-size: 19px; margin-bottom: 40px;">Traditional automation is fragile. We build infrastructure—systems that are modular, secure, and built to evolve with your business.</p>
@@ -134,16 +241,56 @@
                     </div>
                 </div>
 
-                <div class="reveal reveal-delay-2" style="background: #fff; padding: 48px; border-radius: 28px; border: 1px solid var(--border);">
-                    <p style="font-style: italic; font-size: 18px; color: var(--fg); line-height: 1.6; margin-bottom: 24px;">
-                        "My commitment to every client is simple: We don't just build code; we build the engine of your future growth. If our systems don't deliver the mapped efficiency within 30 days, we iterate at our own cost until they do."
-                    </p>
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="width: 48px; height: 48px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #999;">JS</div>
-                        <div>
-                            <div style="font-weight: 600; font-size: 15px;">Founder & Lead Architect</div>
-                            <div class="signature">ElitePeak AI</div>
+                <div class="reveal reveal-delay-2 founder-card">
+                    <div class="founder-card-inner">
+                        <p class="founder-quote">
+                            "My commitment to every client is simple: We don't just build code; we build the engine of your future growth. If our systems don't deliver the mapped efficiency within 30 days, we iterate at our own cost until they do."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <div class="avatar">JS</div>
+                            <div>
+                                <div style="font-weight: 600; font-size: 15px;">Founder & Lead Architect</div>
+                                <div class="signature">ElitePeak AI</div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section id="faq" class="bg-alt">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-label reveal">Support</span>
+                <h2 class="section-title reveal">Frequently Asked.</h2>
+                <p class="section-sub" style="margin: 0 auto;">Everything you need to know about scaling with ElitePeak AI.</p>
+            </div>
+
+            <div class="faq-accordion reveal">
+                <div class="faq-item">
+                    <button class="faq-question">How does the 14-Day Blueprint work? <i data-lucide="plus"></i></button>
+                    <div class="faq-answer">
+                        <p>We spend Day 1-3 auditing your manual bottlenecks. Day 4-10 building your custom AI engine. Day 11-14 deploying, testing, and training your team. It's a sprint designed for zero downtime.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need to be a technical founder? <i data-lucide="plus"></i></button>
+                    <div class="faq-answer">
+                        <p>Not at all. We handle the entire tech stack. You receive a high-level dashboard that tracks efficiency metrics so you can focus on growth, not troubleshooting.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What if the AI makes a mistake? <i data-lucide="plus"></i></button>
+                    <div class="faq-answer">
+                        <p>Our "Siloed Architecture" includes human-in-the-loop triggers for high-stakes decisions. If the AI is unsure, it flags a human agent instantly, ensuring 100% accuracy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Pricing and ROI? <i data-lucide="plus"></i></button>
+                    <div class="faq-answer">
+                        <p>Our audit is free. If we don't project at least a 3x ROI in the first 90 days, we won't take the project. Pricing is fixed-fee based on the complexity of the deployment.</p>
                     </div>
                 </div>
             </div>
@@ -155,8 +302,28 @@
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Stop leaving growth <br> to chance.</h2>
             <p class="section-sub" style="margin: 0 auto; max-width: 600px;">Every hour spent on manual work is $150+ in lost potential revenue. We help you reclaim that loss and turn it into scale.</p>
+            
+            <div class="impact-stats reveal">
+                <div class="stat-card">
+                    <span class="stat-value">100+</span>
+                    <span class="stat-label">Hours Reclaimed / Mo</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">24/7</span>
+                    <span class="stat-label">Operating Time</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">0%</span>
+                    <span class="stat-label">Human Error Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">3.5x</span>
+                    <span class="stat-label">Avg. Pipeline Speed</span>
+                </div>
+            </div>
+
             <div class="reveal" style="margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
-                <a href="https://calendly.com/elitepeakai/30min" class="btn-primary" style="font-size: 21px; padding: 20px 48px; border-radius: 99px;">Book a Free Automation Audit</a>
+                <a href="https://calendly.com/elitepeakai/30min" class="btn-primary shimmer" style="font-size: 21px; padding: 20px 48px; border-radius: 99px;">Book a Free Automation Audit</a>
                 <p style="color: var(--muted); font-size: 14px;">Limited slots available. No obligation.</p>
             </div>
         </div>
