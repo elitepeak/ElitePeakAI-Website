@@ -19,7 +19,7 @@ const initApp = () => {
     // Live Status Rotation
     if (liveStatus) {
         const statuses = [
-            'Accepting 2 new partners for May',
+            'Accepting 2 new partners for June',
             'Deployment slots: 1 remaining this week',
             'Estimated ROI: 4.2x within 90 days',
             'Recent Audit: Reclaimed 120 hrs/mo'
@@ -39,6 +39,33 @@ const initApp = () => {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+        });
+    }
+
+    // 3. Copy Email Logic
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyTooltip = document.getElementById('copyTooltip');
+    if (copyBtn && copyTooltip) {
+        copyBtn.addEventListener('click', () => {
+            const email = 'Emmanuel@elitepeakai.com';
+            navigator.clipboard.writeText(email).then(() => {
+                copyTooltip.classList.add('show');
+                setTimeout(() => {
+                    copyTooltip.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Clipboard copy failed:', err);
+                const el = document.createElement('textarea');
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                copyTooltip.classList.add('show');
+                setTimeout(() => {
+                    copyTooltip.classList.remove('show');
+                }, 2000);
+            });
         });
     }
 

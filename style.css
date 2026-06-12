@@ -755,3 +755,437 @@ section {
         justify-content: center;
     }
 }
+
+/* ───────── BRAND LOGO BAND ───────── */
+.brand-band {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.brand-band-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.brand-band-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.brand-logos-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0.5;
+    filter: grayscale(1);
+    transition: opacity 0.3s;
+}
+
+.brand-logos-container:hover {
+    opacity: 0.8;
+}
+
+.brand-logo-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.02em;
+}
+
+.brand-logo-item svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ───────── PORTFOLIO (PREVIOUS WORK) ───────── */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.portfolio-card {
+    background: var(--bg);
+    border-radius: 28px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    transition: transform 0.4s cubic-bezier(0, 0, 0.5, 1), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.portfolio-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--bg-alt);
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+.portfolio-metric {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 24px 0 8px;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-metric-label {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.portfolio-visual-mock {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.03) 0%, rgba(0, 102, 204, 0.08) 100%);
+    border-radius: 16px;
+    margin-top: 32px;
+    border: 1px dashed var(--border);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-visual-mock::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 12px 12px;
+    opacity: 0.4;
+}
+
+/* ───────── TEAM (MEET THE TEAM) ───────── */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.team-card {
+    background: var(--bg);
+    border-radius: 28px;
+    padding: 48px 32px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card:hover {
+    transform: scale(1.02);
+}
+
+.team-avatar-container {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 3px solid #fff;
+}
+
+.team-avatar.emmanuel {
+    background: linear-gradient(135deg, #c3dafe 0%, #a5b4fc 100%);
+    color: #1e1b4b;
+}
+
+.team-avatar.joshua {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    color: #431407;
+}
+
+.team-role {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.team-bio {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 16px;
+}
+
+/* ───────── GOOGLE & TRUSTPILOT REVIEWS ───────── */
+.google-reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.google-logo-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.google-rating-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.google-stars {
+    color: #fbbc05;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.google-review-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.google-review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.google-reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.google-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+}
+
+.google-reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.google-reviewer-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1d1d1f;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.google-reviewer-meta {
+    font-size: 11px;
+    color: #86868b;
+}
+
+.google-logo-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.google-review-text {
+    font-size: 15px;
+    color: #1d1d1f;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    color: #0066cc;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* ───────── CONTACT (LOW FRICTION) ───────── */
+.contact-section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 48px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.email-copy-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    padding: 8px 8px 8px 20px;
+    border-radius: 99px;
+    width: 100%;
+    max-width: 440px;
+    justify-content: space-between;
+    gap: 12px;
+    transition: border-color 0.2s;
+}
+
+.email-copy-wrapper:focus-within {
+    border-color: var(--accent);
+}
+
+.email-text-display {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 99px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #0077ed;
+}
+
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: var(--fg);
+    color: var(--bg);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.copy-tooltip.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ───────── MOBILE ADJUSTMENTS FOR NEW SECTIONS ───────── */
+@media (max-width: 768px) {
+    .brand-band-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+    }
+    .brand-logos-container {
+        justify-content: center;
+        gap: 28px;
+    }
+    .google-reviews-header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .contact-card {
+        padding: 32px 20px;
+    }
+    .email-copy-wrapper {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 16px;
+        gap: 16px;
+    }
+    .copy-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
